@@ -1,0 +1,54 @@
+---
+description: Maintenance obligatoire du fichier CLAUDE.md
+alwaysApply: true
+---
+
+# Maintenance de CLAUDE.md
+
+Le fichier `CLAUDE.md` à la racine du projet documente le contexte essentiel pour les agents IA.
+**Il doit rester synchronisé avec l'état réel du projet.**
+
+## Règle obligatoire
+
+Après chaque modification significative du projet, **vérifie si `CLAUDE.md` doit être mis à jour**.
+
+### Modifications déclenchant une mise à jour
+
+Tu **dois** mettre à jour `CLAUDE.md` si tu as :
+
+- Ajouté, renommé ou supprimé un **fichier ou module** structurant (connecteur, service, etc.)
+- Modifié la **structure des dossiers** du projet
+- Ajouté ou modifié une **variable d'environnement** requise
+- Introduit un nouveau **pattern architectural** ou une nouvelle convention
+- Ajouté une **dépendance** significative dans `pyproject.toml`
+- Modifié le **schéma de la base de données**
+- Ajouté ou modifié une **commande CLI** ou un point d'entrée
+- Créé une nouvelle **classe d'exception** ou modifié la gestion des erreurs
+
+### Ce qu'il faut mettre à jour
+
+Selon la nature du changement, mets à jour la section appropriée de `CLAUDE.md` :
+
+| Changement | Section à mettre à jour |
+|------------|------------------------|
+| Nouveau fichier/module | **Structure du code** |
+| Nouvelle variable d'env | **Variables d'environnement requises** |
+| Nouveau pattern/convention | **Patterns et conventions** |
+| Nouvelle commande | **Commandes utiles** |
+| Nouveau type d'erreur | **Patterns et conventions → Gestion des erreurs** |
+| Guide d'évolution | **Points d'attention → Évolutions courantes** |
+
+### Workflow
+
+1. **Termine ta tâche principale** (feature, bugfix, refactor).
+2. **Vérifie** si un des critères ci-dessus s'applique.
+3. Si oui, **mets à jour `CLAUDE.md`** dans le même diff.
+4. **Mentionne** la mise à jour dans ton résumé final.
+
+### Exceptions
+
+Tu peux **ne pas** mettre à jour `CLAUDE.md` si :
+
+- Le changement est purement cosmétique (formatage, typos dans le code)
+- Tu modifies uniquement des tests sans impact sur l'architecture
+- Tu corriges un bug sans changer l'interface publique ou les conventions
