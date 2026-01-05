@@ -1,0 +1,122 @@
+# Conventions de commits Git
+
+Cette règle définit les conventions pour les messages de commit dans ce projet.
+Elle s'applique à **tous les commits** réalisés par l'agent.
+
+---
+
+## Format
+
+Utilise le format **Conventional Commits** sur une seule ligne :
+
+```
+<type>(<scope>): <description>
+```
+
+- **Type** : obligatoire, en minuscules
+- **Scope** : optionnel, entre parenthèses, indique la zone impactée
+- **Description** : obligatoire, impératif présent, sans majuscule initiale, sans point final
+- **Longueur** : **une seule ligne, max 72 caractères**
+
+### Types autorisés
+
+| Type | Usage |
+|------|-------|
+| `feat` | Nouvelle fonctionnalité |
+| `fix` | Correction de bug |
+| `docs` | Documentation uniquement |
+| `style` | Formatage, espaces, ponctuation (pas de changement de code) |
+| `refactor` | Refactoring sans changement de comportement |
+| `test` | Ajout ou modification de tests |
+| `chore` | Maintenance, dépendances, config, CI |
+| `perf` | Amélioration de performance |
+| `ci` | Configuration CI/CD |
+| `build` | Système de build, dépendances externes |
+
+### Scopes suggérés pour ce projet
+
+- `cli` : main.py, arguments, orchestration
+- `config` : config.py, variables d'environnement
+- `db` : database.py, schéma PostgreSQL
+- `copilot` : connecteur GitHub Copilot
+- `cursor` : connecteur Cursor
+- `gitlab` : connecteur GitLab
+- `connectors` : base.py ou plusieurs connecteurs
+- `deps` : pyproject.toml, dépendances
+
+---
+
+## Exemples
+
+### Bons exemples ✅
+
+```
+feat(gitlab): add merge requests endpoint
+```
+
+```
+fix(copilot): handle empty response from usage API
+```
+
+```
+docs: update README with new CLI options
+```
+
+```
+refactor(connectors): extract pagination logic to base class
+```
+
+```
+chore(deps): bump requests to 2.32.0
+```
+
+### Mauvais exemples ❌
+
+```
+Fixed bug          # Trop vague, pas de type
+```
+
+```
+feat: Add new feature.   # Majuscule + point
+```
+
+```
+FEAT(GITLAB): ADD MR ENDPOINT   # Majuscules interdites
+```
+
+```
+feat(gitlab): added merge requests endpoint   # Passé au lieu d'impératif
+```
+
+```
+feat(gitlab): this commit adds the merge requests endpoint to fetch MRs from GitLab API   # Trop long
+```
+
+---
+
+## Règles pour l'agent
+
+### Do
+
+- Écris le message en **anglais** (convention standard pour les commits)
+- Utilise l'**impératif présent** : "add", "fix", "update" (pas "added", "fixes", "updated")
+- Sois **concis mais précis** : le message doit permettre de comprendre le changement sans lire le diff
+- Regroupe les changements **logiquement liés** dans un seul commit
+- Mentionne le scope quand il y a ambiguïté
+
+### Don't
+
+- **Pas de message multi-lignes** : tout doit tenir sur une seule ligne
+- Ne commite pas plusieurs features/bugfixes non liés ensemble
+- Ne mets pas de point final dans le sujet
+- N'utilise pas de majuscule pour le premier mot de la description
+- Ne fais pas de commits vides ou avec "WIP" comme message final
+- N'inclus pas de fichiers non liés au changement décrit
+
+---
+
+## Commande de commit
+
+```bash
+git commit -m "type(scope): description courte"
+```
