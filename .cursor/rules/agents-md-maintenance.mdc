@@ -1,0 +1,52 @@
+---
+description: Maintenance obligatoire du fichier AGENTS.md
+alwaysApply: true
+---
+
+# Maintenance de AGENTS.md
+
+Le fichier `AGENTS.md` à la racine du projet décrit les **rôles d’agents**, leurs **périmètres**, et les **règles de collaboration**.
+**Il doit rester synchronisé avec l'état réel du projet.**
+
+## Règle obligatoire
+
+Après chaque modification significative du projet, **vérifie si `AGENTS.md` doit être mis à jour**.
+
+### Modifications déclenchant une mise à jour
+
+Tu **dois** mettre à jour `AGENTS.md` si tu as :
+
+- Ajouté, renommé ou supprimé un **dossier structurant** (ex: `src/`, `api/`, `data/`, `ai/`, `frontend/`, `docs/`, etc.)
+- Changé la **répartition des responsabilités** (nouveau module “backend” côté data, IA dans le frontend, etc.)
+- Introduit un **nouveau “domaine”** (ex: Observabilité, Sécurité, MLOps) ou un **nouveau type d’agent**
+- Changé les **conventions de collaboration** entre agents (qui modifie quoi, règles de coordination)
+- Ajouté des **commandes de référence** à suivre par défaut (ex: nouvel outil de gestion d’env, nouvel entrypoint, nouveau runner)
+- Modifié une règle de **permissions** (ce qui est autorisé sans demander / à demander / jamais)
+
+### Ce qu'il faut mettre à jour
+
+Selon la nature du changement, mets à jour la section appropriée de `AGENTS.md` :
+
+| Changement | Section à mettre à jour |
+|------------|------------------------|
+| Nouveau domaine / nouveau type d’agent | **Agents définis** + nouvelle section d’agent |
+| Déplacement de dossiers / nouvelle arborescence | **Structure du projet & zones par agent** |
+| Nouvelles conventions d’outillage | **Commands** |
+| Nouvelles règles de coordination | **Collaboration entre agents** |
+| Nouvelles règles “Do/Don’t”, sécurité, permissions | **TL;DR global** + **Safety & permissions** |
+
+### Workflow
+
+1. **Termine ta tâche principale** (feature, bugfix, refactor).
+2. **Vérifie** si un des critères ci-dessus s'applique.
+3. Si oui, **mets à jour `AGENTS.md`** dans le même diff.
+4. **Mentionne** la mise à jour dans ton résumé final.
+
+### Exceptions
+
+Tu peux **ne pas** mettre à jour `AGENTS.md` si :
+
+- Le changement est purement cosmétique (formatage, typos)
+- Tu modifies uniquement des tests sans impact sur l’organisation des dossiers ou des responsabilités
+- Tu corriges un bug très local sans impact sur les périmètres, workflows, commandes ou conventions
+
