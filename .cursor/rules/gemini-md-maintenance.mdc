@@ -1,0 +1,48 @@
+---
+description: Maintenance obligatoire du fichier GEMINI.md
+alwaysApply: true
+---
+
+# Maintenance de GEMINI.md
+
+Le fichier `GEMINI.md` à la racine du projet contient les **"Project Memories"** essentielles pour l'agent Gemini.
+**Il doit rester synchronisé avec les décisions structurantes et les évolutions majeures du projet.**
+
+## Prérequis
+
+Si le fichier `GEMINI.md` **n'existe pas** à la racine du projet, **crée-le** en suivant la structure standard décrite dans cette règle.
+
+## Règle obligatoire
+
+Après chaque modification significative ou décision importante, **vérifie si `GEMINI.md` doit être mis à jour**.
+
+### Modifications déclenchant une mise à jour
+
+Tu **dois** mettre à jour `GEMINI.md` si tu as :
+
+- Pris une **décision technique majeure** ou architecturale.
+- Ajouté une **convention de nommage** ou de structure spécifique au projet.
+- Identifié une **contrainte technique** récurrente ou un piège à éviter.
+- Modifié les **objectifs principaux** du projet.
+- Ajouté une règle globale qui doit être appliquée par Gemini à chaque interaction.
+
+### Ce qu'il faut mettre à jour
+
+Ajoute ou modifie des entrées sous forme de liste à puces dans `GEMINI.md`. Chaque entrée doit être concise et porter sur un aspect mémorable du projet :
+
+| Type de changement | Format suggéré |
+|--------------------|----------------|
+| Nouvelle convention | `- **Nom de la convention :** Description courte et directive.` |
+| Décision d'architecture | `- **Architecture :** Explication du choix et conséquences.` |
+| Objectif projet | `- **Objectif :** Description du but recherché.` |
+
+### Workflow
+
+1. **Termine ta tâche principale.**
+2. **Vérifie** si une nouvelle "mémoire" doit être ancrée pour Gemini.
+3. Si oui, **ajoute-la dans `GEMINI.md`** de manière synthétique.
+4. **Mentionne** cette mise à jour dans ton résumé final.
+
+### Exceptions
+
+Ne pas mettre à jour `GEMINI.md` pour des changements mineurs, des corrections de bugs locaux ou des ajouts de fonctionnalités qui suivent déjà les conventions établies.
