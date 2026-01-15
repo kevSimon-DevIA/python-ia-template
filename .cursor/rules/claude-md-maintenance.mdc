@@ -1,6 +1,6 @@
 ---
-description: Maintenance obligatoire du fichier CLAUDE.md
-alwaysApply: true
+description: Mettre à jour CLAUDE.md après modifications architecturales (nouveaux modules, changements de structure, nouvelles variables d'env, patterns)
+alwaysApply: false
 ---
 
 # Maintenance de CLAUDE.md

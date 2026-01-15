@@ -1,6 +1,6 @@
 ---
-description: Maintenance obligatoire du fichier GEMINI.md
-alwaysApply: true
+description: Mettre à jour GEMINI.md après décisions techniques majeures ou évolutions structurantes du projet (conventions, contraintes, objectifs)
+alwaysApply: false
 ---
 
 # Maintenance de GEMINI.md

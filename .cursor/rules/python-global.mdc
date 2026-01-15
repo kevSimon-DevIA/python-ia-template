@@ -1,8 +1,8 @@
 ---
-description: Règles Python globales pour tous mes projets
+description: Règles Python globales (style, typage, tests, architecture) à appliquer lors de l'écriture ou modification de code Python
 globs:
   - "**/*.py"
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Règles Python globales

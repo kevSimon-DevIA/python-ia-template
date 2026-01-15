@@ -1,6 +1,6 @@
 ---
-description: Maintenance obligatoire du fichier AGENTS.md
-alwaysApply: true
+description: Mettre à jour AGENTS.md après modifications structurantes (nouveaux dossiers, changements de responsabilités, nouvelles conventions de collaboration)
+alwaysApply: false
 ---
 
 # Maintenance de AGENTS.md

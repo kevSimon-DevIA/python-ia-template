@@ -1,5 +1,6 @@
 ---
-alwaysApply: true
+description: Appliquer les conventions de commits Git (Conventional Commits, une ligne max 72 caractères) lors de la création de messages de commit
+alwaysApply: false
 ---
 ## Exemples
 
